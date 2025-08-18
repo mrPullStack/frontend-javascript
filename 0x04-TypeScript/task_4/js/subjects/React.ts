@@ -1,21 +1,15 @@
-/// <reference path="./Subject.ts" />
+import Subject from "./Subject";
+import { Teacher } from "./Teacher";
 
-namespace Subjects {
-  // Declaration merging - add new optional attribute
-    export interface Teacher {
-        experienceTeachingReact?: number;
+export class React extends Subject {
+    getRequirements(): string {
+        return "Here is the list of requirements for React";
     }
 
-    export class React extends Subject {
-        getRequirements(): string {
-        return "Here is the list of requirements for React";
-        }
-
-        getAvailableTeacher(): string {
-        if (!this.teacher.experienceTeachingReact) {
-            return "No available teacher";
+    getAvailableTeacher(): string {
+        if (!this.teacher) {
+        return "No available teacher";
         }
         return `Available Teacher: ${this.teacher.firstName}`;
-        }
     }
 }
