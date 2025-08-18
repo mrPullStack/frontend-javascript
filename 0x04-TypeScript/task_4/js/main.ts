@@ -3,31 +3,29 @@
 /// <reference path="./subjects/Java.ts" />
 /// <reference path="./subjects/React.ts" />
 
-// Now you can use Subjects directly
+const cpp = new Subjects.Cpp();
+const java = new Subjects.Java();
+const react = new Subjects.React();
 
-export const cpp = new Subjects.Cpp();
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
-
-export const cTeacher: Subjects.Teacher = {
+const cTeacher: Subjects.Teacher = {
     firstName: "John",
     lastName: "Doe",
     experienceTeachingC: 10,
 };
 
-// Cpp subject
+// C++
 console.log("C++");
 cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
-// Java subject
+// Java
 console.log("Java");
 java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
-// React subject
+// React
 console.log("React");
 react.setTeacher(cTeacher);
 console.log(react.getRequirements());
